@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Patel Harsh Narendra — Portfolio</title>
+  <title>Portfolio</title>
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -84,7 +84,7 @@
       padding:8px 10px;
       border-radius:10px;
     }
-    nav a:hover{color:var(--accent); background:rgba(125,211,252,0.04)}
+    nav a:hover{color:var(--accent); background:rgba(125, 212, 252, 0.265)}
 
     main{
       display:grid;
@@ -192,9 +192,9 @@
   <div class="container" role="main">
     <header>
       <div class="brand">
-        <div class="avatar" aria-hidden="true">PH</div>
+        <!--<div class="avatar" aria-hidden="true">PH</div>-->
         <div>
-          <h1>Patel Harsh Narendra</h1>
+          <h1><strong>Patel Harsh Narendra</strong></h1>
           <p>Computer Science Student</p>
         </div>
       </div>
@@ -202,7 +202,7 @@
       <nav aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
+        <a href="#projects">Resume</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -215,39 +215,33 @@
             <h2>Hello — I'm <strong>Harsh</strong></h2>
             <div class="tag">Computer Science Student</div>
             <p>
-              I am a passionate Computer Science student with an interest in web development and programming fundamentals. I enjoy learning new technologies and building small projects to improve my skills. Currently, I am focusing on strengthening my core concepts in HTML, CSS, JavaScript, and Java while also exploring databases and Python for backend logic. My goal is to grow as a full-stack developer and create impactful web solutions.
+              I am a passionate Computer Science student with an interest in web development and CyberSecurity. I'm eager in learning new technologies and building small projects to improve my skills. Currently, I'm focusing on strengthening my core concepts and also in CyberSecurity basics.
             </p>
-
-            <div class="skills" id="skills" aria-label="skills list">
-              <span class="chip">HTML</span>
-              <span class="chip">CSS</span>
-              <span class="chip">JavaScript</span>
-              <span class="chip">Java</span>
-              <span class="chip">PL/SQL</span>
-              <span class="chip">Python</span>
-              <span class="chip">Basics — Web & DB</span>
-            </div>
-
-            <div class="actions">
-              <a class="btn" href="https://github.com/Harsh-Patel21" target="_blank" rel="noopener">View GitHub</a>
-              <button class="btn secondary" id="copyEmail">Copy Email</button>
-              <a class="btn secondary" href="#contact">Contact</a>
-            </div>
           </div>
         </div>
 
         <div class="card" id="projects" aria-labelledby="projects-heading" style="margin-top:16px">
-          <h3 id="projects-heading">Projects</h3>
-          <div class="projects">
-            <div class="project">
-              <h4>Project — Example 1</h4>
-              <div class="muted">Small web project — add your repo link.</div>
+          <h3 id="projects-heading">Skills</h3>
+            <div class="skills" id="skills" aria-label="skills list">
+              <span class="chip">HTML</span> <br>
+              <span class="chip">CSS</span> <br>
+              <span class="chip">JavaScript</span> <br>
+              <span class="chip">Java</span> <br>
+              <span class="chip">PL/SQL</span> <br>
+              <span class="chip">Python</span> <br>
+              <!--<span class="chip">Basics — Web & DB</span>-->
+            </div>
             </div>
 
-            <div class="project">
-              <h4>Project — Example 2</h4>
-              <div class="muted">Describe the project and technologies used.</div>
-            </div>
+        
+        <div class="card" id="projects" aria-labelledby="projects-heading" style="margin-top:16px">
+          <h3 id="projects-heading">Resume</h3>
+          <div class="projects">
+            <div class="box">
+            <!--<div class="label">Resume</div>
+            <div class="muted">Add a file named <code>resume.pdf</code> to this repo to enable download</div>-->
+            <div style="margin-top:8px"><a class="btn" href="resume.pdf" open>Open Resume</a></div>
+          </div>
 
             <!-- Add more project cards here -->
           </div>
@@ -257,22 +251,17 @@
       <!-- right column -->
       <aside>
         <div class="meta">
+            <div class="box">
+            <div class="label">Quick Info</div>
+            <div class="muted">Location</div>
+            <div style="margin-top:6px">Anand, Gujarat, India</div>
+          </div>
+
+
           <div class="box contact" id="contact">
             <div class="label">Contact</div>
             <div><a href="mailto:harshdiwani05@gmail.com">harshdiwani05@gmail.com</a></div>
             <div style="margin-top:8px"><a href="https://github.com/Harsh-Patel21" target="_blank" rel="noopener">github.com/Harsh-Patel21</a></div>
-          </div>
-
-          <div class="box">
-            <div class="label">Quick Info</div>
-            <div class="muted">Location</div>
-            <div style="margin-top:6px">India</div>
-          </div>
-
-          <div class="box">
-            <div class="label">Resume</div>
-            <div class="muted">Add a file named <code>resume.pdf</code> to this repo to enable download</div>
-            <div style="margin-top:8px"><a class="btn" href="resume.pdf" download>Download Resume</a></div>
           </div>
         </div>
       </aside>
