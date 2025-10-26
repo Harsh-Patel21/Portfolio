@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Patel Harsh Narendra — Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#0f1720;
+      --muted:#9aa4b2;
+      --accent:#7dd3fc;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --maxw:980px;
+      --gap:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background: radial-gradient(1000px 600px at 10% 10%, rgba(45,55,72,0.12), transparent 8%),
+                  linear-gradient(180deg, rgba(255,255,255,0.01), transparent 30%),
+                  var(--bg);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:40px 20px;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--maxw);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:18px;
+      padding:28px;
+      box-shadow: 0 8px 30px rgba(2,6,23,0.7);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      margin-bottom:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+    .avatar{
+      width:56px;
+      height:56px;
+      border-radius:12px;
+      background:linear-gradient(135deg,#0ea5a4,#7dd3fc);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:#042028;
+      font-size:18px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.5);
+    }
+    .brand h1{font-size:18px;margin:0}
+    .brand p{margin:0;font-size:13px;color:var(--muted)}
+
+    nav a{
+      color:var(--muted);
+      font-size:14px;
+      margin-left:14px;
+      text-decoration:none;
+      padding:8px 10px;
+      border-radius:10px;
+    }
+    nav a:hover{color:var(--accent); background:rgba(125,211,252,0.04)}
+
+    main{
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:var(--gap);
+      align-items:start;
+    }
+
+    /* Left column */
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.017), rgba(255,255,255,0.01));
+      padding:20px;
+      border-radius:var(--radius);
+      border:1px solid rgba(255,255,255,0.02);
+      box-shadow: 0 6px 22px rgba(2,6,23,0.45);
+    }
+
+    .hero{
+      display:flex;
+      gap:18px;
+      align-items:flex-start;
+    }
+    .hero-left{flex:1}
+    .hero h2{margin:0;font-size:22px}
+    .hero .tag{color:var(--accent); font-weight:600; margin-top:6px}
+    .hero p{margin-top:12px;color:var(--muted)}
+
+    .actions{
+      margin-top:14px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.06);
+      padding:10px 12px;
+      border-radius:12px;
+      font-weight:600;
+      cursor:pointer;
+      color:var(--accent);
+      text-decoration:none;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+    }
+    .btn.secondary{
+      color:var(--muted);
+      border-style: dashed;
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+    }
+
+    /* Skills */
+    .skills{
+      margin-top:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .chip{
+      background:var(--glass);
+      border-radius:999px;
+      padding:8px 12px;
+      font-size:13px;
+      color:var(--muted);
+      border:1px solid rgba(255,255,255,0.02);
+    }
+
+    /* Right column */
+    aside .meta{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .meta .box{
+      background: linear-gradient(180deg, rgba(255,255,255,0.012), rgba(255,255,255,0.01));
+      padding:12px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .meta .label{font-size:12px;color:var(--muted);margin-bottom:6px}
+    .contact a{color:var(--accent);text-decoration:none; font-weight:600}
+
+    /* Projects list */
+    .projects{display:grid;gap:12px;margin-top:12px}
+    .project{
+      padding:12px;
+      border-radius:12px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .project h4{margin:0 0 6px 0}
+    .muted{color:var(--muted);font-size:13px}
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.02)}
+
+    /* Responsive */
+    @media (max-width:900px){
+      main{grid-template-columns:1fr; padding-bottom:6px}
+      aside{order:2}
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">PH</div>
+        <div>
+          <h1>Patel Harsh Narendra</h1>
+          <p>Computer Science Student</p>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- left column -->
+      <section>
+        <div class="card hero" id="about">
+          <div class="hero-left">
+            <h2>Hello — I'm <strong>Harsh</strong></h2>
+            <div class="tag">Computer Science Student</div>
+            <p>
+              I am a passionate Computer Science student with an interest in web development and programming fundamentals. I enjoy learning new technologies and building small projects to improve my skills. Currently, I am focusing on strengthening my core concepts in HTML, CSS, JavaScript, and Java while also exploring databases and Python for backend logic. My goal is to grow as a full-stack developer and create impactful web solutions.
+            </p>
+
+            <div class="skills" id="skills" aria-label="skills list">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">Java</span>
+              <span class="chip">PL/SQL</span>
+              <span class="chip">Python</span>
+              <span class="chip">Basics — Web & DB</span>
+            </div>
+
+            <div class="actions">
+              <a class="btn" href="https://github.com/Harsh-Patel21" target="_blank" rel="noopener">View GitHub</a>
+              <button class="btn secondary" id="copyEmail">Copy Email</button>
+              <a class="btn secondary" href="#contact">Contact</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="projects" aria-labelledby="projects-heading" style="margin-top:16px">
+          <h3 id="projects-heading">Projects</h3>
+          <div class="projects">
+            <div class="project">
+              <h4>Project — Example 1</h4>
+              <div class="muted">Small web project — add your repo link.</div>
+            </div>
+
+            <div class="project">
+              <h4>Project — Example 2</h4>
+              <div class="muted">Describe the project and technologies used.</div>
+            </div>
+
+            <!-- Add more project cards here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- right column -->
+      <aside>
+        <div class="meta">
+          <div class="box contact" id="contact">
+            <div class="label">Contact</div>
+            <div><a href="mailto:harshdiwani05@gmail.com">harshdiwani05@gmail.com</a></div>
+            <div style="margin-top:8px"><a href="https://github.com/Harsh-Patel21" target="_blank" rel="noopener">github.com/Harsh-Patel21</a></div>
+          </div>
+
+          <div class="box">
+            <div class="label">Quick Info</div>
+            <div class="muted">Location</div>
+            <div style="margin-top:6px">India</div>
+          </div>
+
+          <div class="box">
+            <div class="label">Resume</div>
+            <div class="muted">Add a file named <code>resume.pdf</code> to this repo to enable download</div>
+            <div style="margin-top:8px"><a class="btn" href="resume.pdf" download>Download Resume</a></div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Patel Harsh Narendra • Built with HTML, CSS & a little JS
+    </footer>
+  </div>
+
+  <script>
+    // small JS utilities
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById('copyEmail').addEventListener('click', function(){
+      const email = 'harshdiwani05@gmail.com';
+      navigator.clipboard?.writeText(email).then(() => {
+        this.textContent = 'Copied ✓';
+        setTimeout(()=> this.textContent = 'Copy Email', 1800);
+      }).catch(()=> {
+        alert('Copy failed — please copy manually: ' + email);
+      });
+    });
+
+    // smooth scroll for nav links
+    document.querySelectorAll('nav a').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+  </script>
+</body>
+</html>
