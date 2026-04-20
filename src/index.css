@@ -1,0 +1,271 @@
+/* stylelint-disable-next-line at-rule-no-unknown */
+@tailwind base;
+/* stylelint-disable-next-line at-rule-no-unknown */
+@tailwind components;
+/* stylelint-disable-next-line at-rule-no-unknown */
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #0d0d15;
+    color: white;
+}
+
+@keyframes slideIn {
+    from { width: 0; }
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+    animation: shimmer 2s infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0d0d15; }
+::-webkit-scrollbar-thumb { background: #60a5fa; border-radius: 4px; }
+
+.words {
+    animation-delay: 0.26s;
+    overflow: hidden;
+    position: relative;
+    height: 70px;
+    width: max-content;
+    font-size: 70px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    line-height: 70px;
+    transition: all 0.3s ease-in-out;
+}
+.words::after {
+    content: " ";
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+}
+
+.word {
+    display: block;
+    height: 100%;
+    animation: spin_4991 6s ease-in-out infinite;
+    background-image: linear-gradient(45deg,#c8f0ff, #60d5ff);
+    background-clip: text;
+    color: transparent;
+}
+
+@keyframes spin_4991 {
+    10% {
+      -webkit-transform: translateY(-102%);
+      transform: translateY(-102%);
+    }
+    
+    25% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+    
+    35% {
+      -webkit-transform: translateY(-202%);
+      transform: translateY(-202%);
+    }
+    
+    50% {
+      -webkit-transform: translateY(-200%);
+      transform: translateY(-200%);
+    }
+    
+    60% {
+      -webkit-transform: translateY(-302%);
+      transform: translateY(-302%);
+    }
+    
+    75% {
+      -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+  }
+  
+  85% {
+    -webkit-transform: translateY(-402%);
+    transform: translateY(-402%);
+  }
+  
+  100% {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%);
+  }
+}
+
+
+.logo{
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-left: 40px;
+  transition: all 0.3s ease-in-out;
+}
+.odd{
+  background-color: #c4ded7;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  height: 50px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  transition: all 0.3s ease-in-out;
+}
+.even{
+  background-color: #8c8c52;
+  padding: 10px;
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+  height: 50px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+#H:hover{
+  transform: scale(1.15);
+  transition: all 0.1s ease-in-out;
+}
+#A:hover{
+  transform: scale(1.15);
+  transition: all 0.1s ease-in-out;
+}
+#R:hover{
+  transform: scale(1.15);
+  transition: all 0.1s ease-in-out;
+}
+#S:hover{
+  transform: scale(1.15);
+  transition: all 0.1s ease-in-out;
+}
+.logo:hover{
+  .odd{
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+  .even{
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  transform: scale(1.03);
+}
+
+
+
+/* Angle setup for animation */
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+.magic-heading {
+    /* background-image: linear-gradient(var(--angle), #0078FF, #A81BDB, #FF004D); */
+    background-image: linear-gradient(var(--angle), #07517f, #11f0f0, white);
+    background-attachment: fixed; /* Keep it fixed to the screen */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    /* Smooth infinite rotation */
+    animation: rotateGradient 15s linear infinite;
+    background-color: ;
+}
+@keyframes rotateGradient {
+  0% { --angle: 0deg; }
+  100% { --angle: 360deg; }
+}
+
+.moving-outline{
+  font-weight:900;
+  color:transparent;
+  -webkit-text-stroke:1px #aeaeaebe;
+}
+
+.magic-words{
+  font-family: "Dancing Script", cursive;
+  display: block;
+  height: 100%;
+  /* background-image: linear-gradient(var(--angle), #0078FF, #A81BDB, #FF004D); */
+  background-image: linear-gradient(var(--angle), #07517f, #11f0f0, white);
+  background-clip: text;
+  color: transparent;
+  background-attachment: fixed; /* Keep it fixed to the screen */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Smooth infinite rotation */
+  animation:
+  rotateGradient 15s linear infinite,
+  spin_4991 6s ease-in-out infinite;
+}
+
+.magic-progress{
+  /* background-image: linear-gradient(var(--angle), #0078FF, #A81BDB, #FF004D); */
+  background-image: linear-gradient(var(--angle), #07517f, #11f0f0, white);
+  background-attachment: fixed;
+  background-size: 200% 200%;
+  animation: rotateGradient 15s linear infinite;
+}
+
+.magic-svg{
+  background-image: linear-gradient(var(--angle), #07517f, #11f0f0, white);
+  background-attachment: fixed;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-color: transparent;
+  animation: rotateGradient 15s linear infinite;
+}
+
+.magic-bg:hover {
+  /* background-image: linear-gradient(var(--angle), #0078FF, #A81BDB, #FF004D); */
+  background-image: linear-gradient(var(--angle), #07517f, #11f0f0, white);
+  background-attachment: fixed; /* Keep it fixed to the screen */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #053f45;
+  background-clip: border-box;
+  color: white;
+  animation: rotateGradient 15s linear infinite;
+}
+
+.magic-spc:hover{
+  background-image: linear-gradient(var(--angle), #07517f, #11f0f0, white);
+  background-attachment: fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: rotateGradient 15s linear infinite;
+}
