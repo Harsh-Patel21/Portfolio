@@ -25,7 +25,7 @@ export default function Home() {
               </div>
               <div className="relative bg-gradient-to-br from-gray-700 to-gray-800 rounded-3xl p-2 transform hover:scale-105 transition-transform duration-300 shadow-2xl shadow-cyan-400/20">
                 {/* For strict offline use, download an image to src/assets/profile.jpg and use src={profileImg} */}
-                <img alt="Harsh Patel" className="rounded-2xl w-full h-auto object-cover" src="./src/assets/portfo.jpg" style={{ maxWidth: '400px' }} />
+                <img alt="Harsh Patel" className="rounded-2xl w-full h-auto object-cover" src="./public/portfo.jpg" style={{ maxWidth: '400px' }} />
               </div>
             </div>
           </div>
