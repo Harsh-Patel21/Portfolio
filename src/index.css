@@ -200,7 +200,6 @@ body {
     color: transparent;
     /* Smooth infinite rotation */
     animation: rotateGradient 15s linear infinite;
-    background-color: ;
 }
 @keyframes rotateGradient {
   0% { --angle: 0deg; }

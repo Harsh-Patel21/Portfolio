@@ -15,7 +15,10 @@ export default function Home() {
             <p className="text-lg text-gray-300 leading-relaxed">Seeking an internship opportunity in software or web development to apply my academic knowledge, improve my technical skills, and gain hands-on experience in real-world projects.</p>
             <div className="flex space-x-4 pt-4">
               <button onClick={() => scrollTo('contact')} className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md shadow hover:bg-primary/90 h-9 magic-progress hover:from-cyan-300 hover:to-blue-400 text-cyan-950 px-8 py-6 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-400/50 border-0">Let's Connect</button>
-              <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md shadow-sm h-9 border-2 border-cyan-700 hover:border-cyan-400 magic-heading px-8 py-6 text-lg font-semibold transition-all duration-300 hover:bg-cyan-400/10 bg-transparent">View Resume</button>
+              {/* <button src="./public/Harsh_resume.pdf" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md shadow-sm h-9 border-2 border-cyan-700 hover:border-cyan-400 magic-heading px-8 py-6 text-lg font-semibold transition-all duration-300 hover:bg-cyan-400/10 bg-transparent">View Resume</button> */}
+              <a href={`${import.meta.env.BASE_URL}Harsh_resume.pdf`} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md shadow-sm h-9 border-2 border-cyan-700 hover:border-cyan-400 hover:scale-105 magic-heading px-8 py-6 text-lg font-semibold transition-all duration-300 hover:bg-cyan-400/10 bg-transparent">
+                View Resume
+              </a>
             </div>
           </div>
           <div className="flex justify-center lg:justify-end">
@@ -25,7 +28,7 @@ export default function Home() {
               </div>
               <div className="relative bg-gradient-to-br from-gray-700 to-gray-800 rounded-3xl p-2 transform hover:scale-105 transition-transform duration-300 shadow-2xl shadow-cyan-400/20">
                 {/* For strict offline use, download an image to src/assets/profile.jpg and use src={profileImg} */}
-                <img alt="Harsh Patel" className="rounded-2xl w-full h-auto object-cover" src="./public/portfo.jpg" style={{ maxWidth: '400px' }} />
+                <img alt="Harsh Patel" className="rounded-2xl w-full h-auto object-cover" src="./portfo.jpg" style={{ maxWidth: '400px' }} />
               </div>
             </div>
           </div>
